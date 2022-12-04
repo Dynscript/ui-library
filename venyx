@@ -672,6 +672,13 @@ do
 			ImageColor3 = themes.DarkContrast,
 			ScaleType = Enum.ScaleType.Slice,
 			SliceCenter = Rect.new(2, 2, 298, 298)
+			local UIStroke = Instance.new("UIStroke")
+			local UICorner = Instance.new("UICorner")
+			UICorner.CornerRadius = 0.2
+			UICorner.Parent = button
+			UIStroke.Parent = button
+			UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+			UIStroke.Transparency = 0.8
 		}, {
 			utility:Create("TextLabel", {
 				Name = "Title",
@@ -732,6 +739,13 @@ do
 			ImageColor3 = themes.DarkContrast,
 			ScaleType = Enum.ScaleType.Slice,
 			SliceCenter = Rect.new(2, 2, 298, 298)
+			local UIStroke = Instance.new("UIStroke")
+			local UICorner = Instance.new("UICorner")
+			UICorner.CornerRadius = 0.2
+			UICorner.Parent = toggle
+			UIStroke.Parent = toggle
+			UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+			UIStroke.Transparency = 0.8
 		},{
 			utility:Create("TextLabel", {
 				Name = "Title",
@@ -1543,6 +1557,13 @@ do
 			ImageColor3 = themes.DarkContrast,
 			ScaleType = Enum.ScaleType.Slice,
 			SliceCenter = Rect.new(2, 2, 298, 298)
+			local UIStroke = Instance.new("UIStroke")
+			local UICorner = Instance.new("UICorner")
+			UICorner.CornerRadius = 0.2
+			UICorner.Parent = slider
+			UIStroke.Parent = slider
+			UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+			UIStroke.Transparency = 0.8
 		}, {
 			utility:Create("TextLabel", {
 				Name = "Title",
@@ -1688,6 +1709,13 @@ do
 			BackgroundTransparency = 1,
 			Size = UDim2.new(1, 0, 0, 30),
 			ClipsDescendants = true
+			local UIStroke = Instance.new("UIStroke")
+			local UICorner = Instance.new("UICorner")
+			UICorner.CornerRadius = 0.2
+			UICorner.Parent = dropdown
+			UIStroke.Parent = dropdown
+			UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+			UIStroke.Transparency = 0.8
 		}, {
 			utility:Create("UIListLayout", {
 				SortOrder = Enum.SortOrder.LayoutOrder,
@@ -2167,5 +2195,32 @@ do
 		end
 	end
 end
+
+local LineUp = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local LineDown = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+
+LineUp.Name = "LineUp"
+LineUp.Parent = game.CoreGui["HaXx C0de"].Main
+LineUp.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+LineUp.BackgroundTransparency = 0.800
+LineUp.Position = UDim2.new(0.00136116147, 0, 0.0976863727, 0)
+LineUp.Size = UDim2.new(0, 550, 0, 1)
+LineUp.ZIndex = 10
+
+UICorner.CornerRadius = UDim.new(0, 4)
+UICorner.Parent = LineUp
+
+LineDown.Name = "LineDown"
+LineDown.Parent = game.CoreGui["HaXx C0de"].Main
+LineDown.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+LineDown.BackgroundTransparency = 0.800
+LineDown.Position = UDim2.new(0.228675142, 0, 0.0976863727, 0)
+LineDown.Size = UDim2.new(0, 1, 0, 351)
+LineDown.ZIndex = 10
+
+UICorner_2.CornerRadius = UDim.new(0, 4)
+UICorner_2.Parent = LineDown
 
 return library
